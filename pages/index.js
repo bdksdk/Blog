@@ -1,14 +1,7 @@
-
-
-
-
-
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
-import fetch from 'isomorphic-unfetch'
-export default function Home(posts) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -22,15 +15,70 @@ export default function Home(posts) {
             <Link href="/test"><a>Ana səhifə</a></Link> <Link href="/test"><a>Haqqimda</a></Link>
           </div>
         </div>
-        {posts.map(post=>(
         <div className="blog">
-          <h2><Link href="/test"><a>{post.title}</a></Link></h2>
+          <h2><Link href="/test"><a>Lorem ipsum dolor sit amet.</a></Link></h2>
           <div>
-            {post.details}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ratione maxime perferendis mollitia
+            fuga dicta asperiores? Dolore sequi doloribus nobis. Voluptates neque aperiam veniam qui expedita aliquid,
+            ut quam cupiditate recusandae tempore sint itaque at! Aliquam temporibus omnis, consectetur corporis eveniet
+            officiis perferendis commodi unde, in velit totam eum facilis dolor. Quod minima doloribus rem temporibus
+            voluptatum suscipit in, molestias porro, itaque consectetur blanditiis? Numquam maiores eum autem pariatur
+            tenetur vel eligendi sapiente ipsam. Adipisci autem vitae expedita repellat dolores reiciendis itaque optio
+            quibusdam quam vero repellendus natus voluptates saepe nobis libero maxime, eum aperiam doloribus eaque. Ipsum
+            ab nulla facere nihil blanditiis tenetur dolor nemo numquam, optio repellat magni a reiciendis repellendus vero
+            distinctio aperiam incidunt laborum libero sit. Illum animi qui ipsam, ex quis aut eos officiis voluptatibus cum quam amet.
           </div>
           <div className="blog-date">blog date</div>
         </div>
-))}
+
+        <div className="blog">
+          <h2><Link href="/test"><a>Lorem ipsum dolor sit amet.</a></Link></h2>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ratione maxime perferendis mollitia
+            fuga dicta asperiores? Dolore sequi doloribus nobis. Voluptates neque aperiam veniam qui expedita aliquid,
+            ut quam cupiditate recusandae tempore sint itaque at! Aliquam temporibus omnis, consectetur corporis eveniet
+            officiis perferendis commodi unde, in velit totam eum facilis dolor. Quod minima doloribus rem temporibus
+            voluptatum suscipit in, molestias porro, itaque consectetur blanditiis? Numquam maiores eum autem pariatur
+            tenetur vel eligendi sapiente ipsam. Adipisci autem vitae expedita repellat dolores reiciendis itaque optio
+            quibusdam quam vero repellendus natus voluptates saepe nobis libero maxime, eum aperiam doloribus eaque. Ipsum
+            ab nulla facere nihil blanditiis tenetur dolor nemo numquam, optio repellat magni a reiciendis repellendus vero
+            distinctio aperiam incidunt laborum libero sit. Illum animi qui ipsam, ex quis aut eos officiis voluptatibus cum quam amet.
+          </div>
+          <div className="blog-date">blog date</div>
+        </div>
+
+        <div className="blog">
+          <h2><Link href="/test"><a>Lorem ipsum dolor sit amet.</a></Link></h2>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ratione maxime perferendis mollitia
+            fuga dicta asperiores? Dolore sequi doloribus nobis. Voluptates neque aperiam veniam qui expedita aliquid,
+            ut quam cupiditate recusandae tempore sint itaque at! Aliquam temporibus omnis, consectetur corporis eveniet
+            officiis perferendis commodi unde, in velit totam eum facilis dolor. Quod minima doloribus rem temporibus
+            voluptatum suscipit in, molestias porro, itaque consectetur blanditiis? Numquam maiores eum autem pariatur
+            tenetur vel eligendi sapiente ipsam. Adipisci autem vitae expedita repellat dolores reiciendis itaque optio
+            quibusdam quam vero repellendus natus voluptates saepe nobis libero maxime, eum aperiam doloribus eaque. Ipsum
+            ab nulla facere nihil blanditiis tenetur dolor nemo numquam, optio repellat magni a reiciendis repellendus vero
+            distinctio aperiam incidunt laborum libero sit. Illum animi qui ipsam, ex quis aut eos officiis voluptatibus cum quam amet.
+          </div>
+          <div className="blog-date">blog date</div>
+        </div>
+
+        <div className="blog">
+          <h2><Link href="/test"><a>Lorem ipsum dolor sit amet.</a></Link></h2>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ratione maxime perferendis mollitia
+            fuga dicta asperiores? Dolore sequi doloribus nobis. Voluptates neque aperiam veniam qui expedita aliquid,
+            ut quam cupiditate recusandae tempore sint itaque at! Aliquam temporibus omnis, consectetur corporis eveniet
+            officiis perferendis commodi unde, in velit totam eum facilis dolor. Quod minima doloribus rem temporibus
+            voluptatum suscipit in, molestias porro, itaque consectetur blanditiis? Numquam maiores eum autem pariatur
+            tenetur vel eligendi sapiente ipsam. Adipisci autem vitae expedita repellat dolores reiciendis itaque optio
+            quibusdam quam vero repellendus natus voluptates saepe nobis libero maxime, eum aperiam doloribus eaque. Ipsum
+            ab nulla facere nihil blanditiis tenetur dolor nemo numquam, optio repellat magni a reiciendis repellendus vero
+            distinctio aperiam incidunt laborum libero sit. Illum animi qui ipsam, ex quis aut eos officiis voluptatibus cum quam amet.
+          </div>
+          <div className="blog-date">blog date</div>
+        </div>
+
       </div>
       <style jsx>
         {`
@@ -50,14 +98,12 @@ export default function Home(posts) {
   `}
       </style>
     </div>
-  );}
-  Home.getInitialProps = async (ctx) => {
-    const res = await fetch('http://localhost:3000/api/post')
-    const json = await res.json();
-    return { posts: json.posts };
-  }
-  
-  export default Home
-  
+  )
+}
+
+
+
+
+
 
 
